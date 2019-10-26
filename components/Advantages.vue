@@ -28,12 +28,12 @@
 
 <script>
     import vueLottie from 'vue-lottie-ssr/src/components/vue-lottie.vue'
-    import desighn from 'vue-lottie-ssr/src//assets/desighn.json'
-    import technology from 'vue-lottie-ssr/src//assets/technology.json'
-    import benefit from 'vue-lottie-ssr/src//assets/benefit.json'
-    import time from 'vue-lottie-ssr/src//assets/time.json'
-    import trophy from 'vue-lottie-ssr/src//assets/trophy.json'
-    import heart from 'vue-lottie-ssr/src//assets/heart.json'
+    import desighn from '../static/anim/desighn.json'
+    import technology from '../static/anim//technology.json'
+    import benefit from '../static/anim//benefit.json'
+    import time from '../static/anim//time.json'
+    import trophy from '../static/anim//trophy.json'
+    import heart from '../static/anim//heart.json'
     export default {
         name: "Advantages",
         components:{vueLottie},

@@ -55,8 +55,8 @@
 
 <script>
     import vueLottie from 'vue-lottie-ssr/src/components/vue-lottie.vue'
-    import astronaut from 'vue-lottie-ssr/src//assets/astronaut.json'
-    import mobile from 'vue-lottie-ssr/src//assets/mobile.json'
+    import astronaut from '../static/anim/astronaut.json'
+    import mobile from '../static/anim/mobile.json'
     export default {
         name: "AboutUs",
         components:{vueLottie},

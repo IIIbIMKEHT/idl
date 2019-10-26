@@ -74,7 +74,7 @@
     import {Hooper,Slide,Pagination as HooperPagination} from "hooper";
     import 'hooper/dist/hooper.css';
     import vueLottie from 'vue-lottie-ssr/src/components/vue-lottie.vue'
-    import office from 'vue-lottie-ssr/src//assets/office.json'
+    import office from '../static/anim/office.json'
     export default {
         name: "Team",
         components:{

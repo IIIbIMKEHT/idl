@@ -20,12 +20,11 @@
 
 </script>
 
-<style>
+<style lang="scss">
 body{
   background-color: #050510;
   font-family: 'Ledger', serif;
-
-
 }
+  @import "../assets/style.scss";
 </style>
 

@@ -2,7 +2,7 @@
     <section class="section sectionAboutUs">
         <b-container class="containerAbout" fluid>
             <b-row class="rowAbout">
-                <b-col class="colAbout" md="3" sm="12" v-for="(item,i) of card" :style="{'background-color':item.bg}" :data-aos="aosAnim[i]">
+                <b-col class="colAbout" md="3" sm="12" v-for="(item,i) of card" :style="{'background-color':item.bg}" >
                     <fa :icon="item.icon" class="icon" />
                     <h3>{{item.title}}</h3>
                     <p>{{item.subtitle}}</p>

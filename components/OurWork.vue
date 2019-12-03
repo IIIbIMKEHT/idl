@@ -9,7 +9,7 @@
         </b-row>
         <no-ssr placeholder="Loading...">
             <carousel-3d height="320" width="500">
-                <slide v-for="(image,i) of images" :key="image" :index="i" >
+                <slide v-for="(image,i) of images" :key="i">
                    <img :src="image.img" class="images">
                 </slide>
 
@@ -19,7 +19,7 @@
             <b-button variant="dark">Все работы</b-button>
             </b-row>
             <b-row class="typicalRowContent slider">
-                <b-col class="colWork" md="3" sm="12" v-for="(item,i) of cards" :data-aos="aos[i]">
+                <b-col class="colWork" md="3" sm="12" v-for="(item,i) of cards" :key="i" :data-aos="aos[i]">
                     <div class="card">
                         <div class="circle">
                             <vue-lottie ref="lottie" loop autoplay :data="svg[i]" :height="150" :width="150"></vue-lottie>

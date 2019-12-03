@@ -3,7 +3,7 @@
 
         <b-container fluid id="containerCarousel">
 
-                    <hooper  class="carouselHooper">
+                    <hooper  class="carouselHooper" :infiniteScroll="true" :wheelControl="false">
                         <slide class="firstSlider" style="width: 100%;" >
                             <b-row class="firstRow">
                                         <no-ssr>
@@ -23,7 +23,7 @@
                                     <h1>Создаем качественно и неповторимо!</h1>
                                     <p>Создаем сайты любой сложности, Адаптивный дизайн  и быстрые строки!</p>
                                     <no-ssr>
-                                        <flip-countdown style="color: white" deadline="2020-01-01 00:00:00"></flip-countdown>
+<!--                                        <flip-countdown style="color: white" deadline="2020-01-01 00:00:00"></flip-countdown>-->
                                     </no-ssr>
                                     <b-button variant="dark">Начать!</b-button>
                                     <b-button variant="success">Портфолио!</b-button>

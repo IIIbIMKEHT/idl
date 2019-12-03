@@ -8,7 +8,7 @@
                 </b-col>
             </b-row>
             <b-row class="typicalRowContent">
-                <b-col class="colAdvantage" md="4" sm="12" v-for="(advantage,i) of advantages" data-aos="flip-left">
+                <b-col class="colAdvantage" md="4" sm="12" v-for="(advantage,i) of advantages" :key="i" data-aos="flip-left">
                     <div class="card" >
                         <div class="circle">
                             <vue-lottie ref="lottie" loop autoplay :data="svg[i]" :height="150" :width="150"></vue-lottie>

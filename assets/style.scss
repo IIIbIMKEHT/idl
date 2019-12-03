@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Alice&display=swap');
+body{
+  font-family: 'Alice', serif;
+}
 //mixins
 @mixin bg($url){
   min-height: 100vh;

@@ -11,7 +11,7 @@
             <b-row class="typicalRowContent slide2">
                 <b-col class="colFirst" md="6" sm="12">
                     <b-tabs content-class="mt-3" fill>
-                        <b-tab v-for="item of tabs" :title="item.title" active><p>{{item.subtitle}}</p></b-tab>
+                        <b-tab v-for="(item, index) of tabs" :key="index" :title="item.title" active><p>{{item.subtitle}}</p></b-tab>
 
                     </b-tabs>
 
@@ -22,7 +22,7 @@
 
             </b-row>
             <b-row class="typicalRowContent">
-                <b-col class="cards" md="3" sm="12" v-for="(item,i) of sections">
+                <b-col class="cards" md="3" sm="12" v-for="(item,i) of sections" :key="i">
                     <client-only>
                         <vc-donut :sections="sections[i]"  foreground="white" background="#111111" has-legend legend-placement="bottom"><h1>{{sectionText[i]}}%</h1></vc-donut>
                     </client-only>
@@ -40,7 +40,7 @@
 
             <b-row class="typicalRowContent">
 
-                <b-col class="teammates" md="6" v-for="item of team"  data-aos="zoom-in-up">
+                <b-col class="teammates" md="6" v-for="(item, index) of team" :key="index" data-aos="zoom-in-up">
                     <div class="teamcard">
                         <div class="circle" :style="{'background-image':'url('+item.img+')', 'background-size':'cover'}"></div>
                         <h3>{{item.name}}</h3>
@@ -51,7 +51,7 @@
             <b-row class="typicalRowContent slide3">
 
                 <hooper class="hooperTeam">
-                    <slide class="slideTeam" v-for="item of comment">
+                    <slide class="slideTeam" v-for="(item, index) of comment" :key="index">
                         <b-row class="rowTeam">
                             <b-col class="colTeam" md="12">
                                 <div class="circle" :style="{'background-image':'url('+item.img+')', 'background-size':'cover'}"></div>

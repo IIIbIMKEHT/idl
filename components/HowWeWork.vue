@@ -10,7 +10,7 @@
                 </b-col>
             </b-row>
             <b-row class="typicalRowContent">
-                <b-col class="colWork" md="3" sm="12" v-for="card of cards" data-aos="flip-left">
+                <b-col class="colWork" md="3" sm="12" v-for="(card, i) of cards" :key="i" data-aos="flip-left">
                     <b-card class="cards" >
                         <div class="circle">
                             <fa class="icon" :icon="card.icon"></fa>

@@ -11,8 +11,9 @@
                 <b-col md="6" order-md="1" order-sm="2" class="formSocial">
                     <div class="contacts">
                         <h3 class="formH3"> Мы в соц. сетях</h3>
-                        <div v-for="item of social">
-                            <img :src="item.url">{{item.title}}
+                        <div>
+                            <!-- По умолчанию -->
+                            <iframe src='http://idl.kz/public/bot/' data-inwidget scrolling='no' frameborder='no' style='border:none;width:260px;height:330px;overflow:hidden;'></iframe>
                         </div>
                     </div>
 
@@ -25,7 +26,6 @@
                     <b-form-input id="input-3" type="email"  placeholder="Ваша почта"></b-form-input>
                     <b-form-textarea
                             id="textarea"
-                            v-model="text"
                             placeholder="Ваш комментарий"
                             rows="3"
                             max-rows="6"

@@ -12,7 +12,7 @@
 
                 <!-- Right aligned nav items -->
                 <b-navbar-nav class="ml-auto">
-                    <b-nav-item v-for="link of links" :to="link.url"><div style="display: inline; margin-right: 5px"><fa :icon="link.icon" ></fa></div>{{link.title}}</b-nav-item>
+                    <b-nav-item v-for="(link, i) of links" :key="i" :to="link.url"><div style="display: inline; margin-right: 5px"><fa :icon="link.icon" ></fa></div>{{link.title}}</b-nav-item>
                 </b-navbar-nav>
             </b-collapse>
         </b-navbar>

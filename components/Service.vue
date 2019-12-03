@@ -8,7 +8,7 @@
                 </b-col>
             </b-row>
             <b-row class="typicalRowContent fullScreen">
-                <b-col class="serviceCol" md="3" sm="12" v-for="item of cards" data-aos="zoom-in">
+                <b-col class="serviceCol" md="3" sm="12" v-for="(item, index) of cards" :key="index" data-aos="zoom-in">
                     <div class="serviceCard" >
                         <fa  class="icon" :icon="item.icon"></fa>
                         <h3>{{item.title}}</h3>
@@ -19,7 +19,7 @@
 
             <b-row class="typicalRowContent smallService">
                 <hooper class="hooperService">
-                    <slide v-for="item of cards">
+                    <slide v-for="(item, index) of cards" :key="index">
                         <b-row>
                             <b-col class="serviceCol2" sm="12" >
                                 <div class="serviceCard" >
@@ -33,7 +33,7 @@
                 </hooper>
             </b-row>
             <b-row class="typicalRowContent">
-                <b-col class="charts" v-for="(section,index) of sections">
+                <b-col class="charts" v-for="(section,index) of sections" :key="index">
                     <vc-donut :sections="sections[index]"  foreground="white" background="#111111" has-legend legend-placement="bottom"><h1>{{sectionText[index]}}%</h1></vc-donut>
 
                 </b-col>
@@ -64,7 +64,7 @@
                 [{ label:"Дизайн", value: 30, color:"#185092" },{label:"Программирование",value:40,color:"#1aade6"},{label:"Оптимизация",value:20,color:"#ff6384"}],
                 [{ label:"Дизайн", value: 30, color:"#185092" },{label:"Программирование",value:40,color:"#1aade6"},{label:"Оптимизация",value:20,color:"#ff6384"},{label:"Тестирование",value:10,color:"#ffce56"}],
             ],
-            sectionText:["30","40","90","100"]
+            sectionText:["30","70","90","100"]
 
 
 

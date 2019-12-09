@@ -1,5 +1,5 @@
 <template>
-    <section class="section service">
+    <section class="section service" id="id-service">
         <b-container class="servisecontainer">
             <b-row class="typicalRow">
                 <b-col md="12">
@@ -34,7 +34,7 @@
             </b-row>
             <b-row class="typicalRowContent">
                 <b-col class="charts" v-for="(section,index) of sections" :key="index">
-                    <vc-donut :sections="sections[index]"  foreground="white" background="#111111" has-legend legend-placement="bottom"><h1>{{sectionText[index]}}%</h1></vc-donut>
+                    <vc-donut :sections="section"  foreground="white" background="#111111" has-legend legend-placement="bottom"><h1>{{sectionText[index]}}%</h1></vc-donut>
 
                 </b-col>
             </b-row>

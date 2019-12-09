@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Alice&display=swap');
+@import '~sweetalert2/src/variables';
+@import '~sweetalert2/src/sweetalert2';
 body{
   font-family: 'Alice', serif;
 }
@@ -77,14 +79,16 @@ body{
   .navbar-nav{
     margin-right: 20px;
 
-    .nav-item{
-      .nav-link{
+    .div-item{
+      color: white;
+      .div-link{
         color: white;
         font-size: 18px;
         margin-right: 10px;
+        text-decoration: none;
 
       }
-      .nav-link:hover{
+      .div-link:hover{
         font-size: 20px;
         transition: 500ms;
         color:#1aade6;
@@ -640,7 +644,7 @@ body{
 //Advantage
 
 .Advantages{
-  @include bg("/img/spaceBg5.jpg");
+  @include bg("/img/spaceBg5.png");
   .typicalRow{}
 
   .typicalRowContent{
@@ -762,14 +766,21 @@ body{
         }
       }
       .links{
-        text-align: center;
+        text-align: left;
+
         @include small{
           margin-top: 20px;
         }
         h5{
           margin-bottom: 20px;
         }
+        .alink{
+          text-decoration: none;
+          color: white;
+          margin-left: 5px;
+        }
       }
+
       .social{
         text-align: center;
         @include small{

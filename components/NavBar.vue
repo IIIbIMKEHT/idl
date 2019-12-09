@@ -1,7 +1,7 @@
 <template>
     <section class="section"  style="position: fixed; z-index: 500">
         <b-navbar toggleable="lg" class="onTop" type="dark">
-            <b-navbar-brand class="brand" href="#">
+            <b-navbar-brand class="brand" href="/">
                 <img src="/img/logo.png">
                 IDL</b-navbar-brand>
 
@@ -12,7 +12,7 @@
 
                 <!-- Right aligned nav items -->
                 <b-navbar-nav class="ml-auto">
-                    <b-nav-item v-for="(link, i) of links" :key="i" :to="link.url"><div style="display: inline; margin-right: 5px"><fa :icon="link.icon" ></fa></div>{{link.title}}</b-nav-item>
+                    <div class="div-item" v-for="(link, i) of links" :key="i" ><div style="display: inline; margin-right: 5px"><fa :icon="link.icon" ></fa></div>    <a class="div-link" :href="link.url" v-smooth-scroll="{ duration: 1000}">{{link.title}}</a></div>
                 </b-navbar-nav>
             </b-collapse>
         </b-navbar>
@@ -24,11 +24,11 @@
         name: "NavBar",
         data:()=>({
             links:[
-                {title:"Главная",url:"/",icon:["fas","home"]},
-                {title:"О команде",url:"/about",icon:["fas","building"]},
-                {title:"Портфолио",url:"/portfolio",icon:["fas","desktop"]},
-                {title:"Сервис",url:"/service",icon:["fas","cubes"]},
-                {title:"Контакты",url:"/contact",icon:["fas","address-book"]},
+                {title:"Главная",url:"#id-carousel",icon:["fas","home"]},
+                {title:"О нас",url:"#id-about",icon:["fas","building"]},
+                {title:"Услуги",url:"#id-service",icon:["fas","cubes"]},
+                {title:"Как мы работаем",url:"#id-work",icon:["fas","desktop"]},
+                {title:"Контакты",url:"#id-contact",icon:["fas","address-book"]},
             ]
         }),
     }

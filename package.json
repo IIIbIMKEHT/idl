@@ -25,6 +25,7 @@
     "bootstrap": "^4.1.3",
     "bootstrap-vue": "^2.0.0-rc.11",
     "hooper": "^0.3.4",
+    "inputmask-core": "^2.2.0",
     "lottie-web": "^5.5.9",
     "nuxt": "^2.0.0",
     "nuxt-fontawesome": "^0.4.0",
@@ -34,7 +35,12 @@
     "vue-carousel-3d": "^0.2.0",
     "vue-css-donut-chart": "^1.1.6",
     "vue-lottie-ssr": "^1.2.0",
-    "vue2-flip-countdown": "^0.9.3"
+    "vue-sweetalert2": "^2.1.5",
+    "vue-tantan-stack": "^1.0.0",
+    "vue-the-mask": "^0.11.1",
+    "vue2-flip-countdown": "^0.9.3",
+    "vue2-smooth-scroll": "^1.1.1",
+    "vuelidate": "^0.7.4"
   },
   "devDependencies": {
     "@bazzite/nuxt-optimized-images": "^0.2.1",

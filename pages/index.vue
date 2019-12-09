@@ -5,8 +5,6 @@
     <service></service>
     <how-we-work></how-we-work>
     <time-line></time-line>
-    <our-work></our-work>
-    <team></team>
     <advantages></advantages>
     <contact></contact>
 </section>

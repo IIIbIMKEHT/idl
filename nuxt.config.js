@@ -10,18 +10,20 @@ export default {
             {charset: 'utf-8'},
             {name: 'viewport', content: 'width=device-width, initial-scale=1'},
             {
-                hid: 'description',
-                name: 'description',
-                content: "IDL оздает качественные сайты с использованием соврменных технологий быстро и качественно,Infinity Digital Life - это то что вам нужно, IDL-Infinity Digital Life"
+                name: 'yandex-verification',
+                content: "8660c1dbe81cd7a9"
             },
             {
-                hid: 'keywords',
                 name: 'keywords',
-                content: "JS,Nuxt,сайт на nuxt,что такое nuxt,idl,IDL,Infinity Digital Life "
+                content: "создание сайта, создать сайт в Казахстане, создать сайт в Шымкенте, создать сайт быстро и качественно, оптимизация сайта"
+            },
+            {
+                name: 'description',
+                content: "IDL-команда профессионалов которая разрабатывает сайты любой сложности,нужен сайт? Только IDL -создаст сайт быстро и качественно по гибкой цене!"
             },
         ],
         link: [
-            {rel: 'icon', type: 'image/x-icon', href: '/favicon.ico'},
+            {rel: 'icon', type: 'image/x-icon', href: '/img/logo1.png'},
             {
                 rel: 'stylesheet',
                 href: "https://fonts.googleapis.com/css?family=Alice|Ledger|Philosopher|Spectral&display=swap"
@@ -52,7 +54,11 @@ export default {
     /*
     ** Nuxt.js dev-modules
     */
-    buildModules: [],
+    buildModules: [
+        ['@nuxtjs/google-analytics', {
+            id: '153765894'
+        }]
+    ],
     /*
     ** Nuxt.js modules
     */
@@ -60,17 +66,8 @@ export default {
         // Doc: https://bootstrap-vue.js.org/docs/
         'bootstrap-vue/nuxt',
         ['vue-sweetalert2/nuxt'],
-        ['nuxt-seo', {
-            seo: {
-                // Module options
-                name: 'IDL SECOND LIFE',
-                title: 'IDL SECOND LIFE',
-                templateTitle: '%name% - %title%',
-                description: 'IDL-команда профессионалов которая разрабатывает сайты любой сложности'
-                //...
-            }
-        }],
-
+        '@nuxtjs/axios',
+        '@nuxtjs/proxy',
         ['nuxt-fontawesome', {
             component: 'fa',
             imports: [
@@ -83,6 +80,7 @@ export default {
         ['@nuxtjs/component-cache', {maxAge: 1000 * 60 * 60}],
 
     ],
+
 
     /*
     ** Build configuration

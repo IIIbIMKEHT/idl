@@ -20,9 +20,9 @@
                 </b-col>
                 <b-col md="6" order-md="2"  order-sm="1" class="formContact">
                     <h3 class="formH3">Напишите нам!</h3>
-                    <b-form-input id="input-1" type="text" v-model="name"  @blur="$v.name.$touch" :state="$v.name.$dirty ? !$v.name.$invalid : mystate " required  placeholder="Ваше имя"></b-form-input>
+                    <b-form-input id="input-1" type="text" v-model="name"  @blur="$v.name.$touch" :state="$v.name.$dirty ? !$v.name.$invalid : mystate "  placeholder="Ваше имя"></b-form-input>
 <!--                    <b-form-input id="input-2" type="text" v-model="phone"  @blur="$v.phone.$touch"  :state="$v.phone.$dirty ? !$v.phone.$invalid : mystate " required  placeholder="Ваш телефон"></b-form-input>-->
-                    <the-mask class="form-control" v-model="phone" :mask="['+7(###)### ##-##']" masked="true" placeholder="Ваш телефон" @blur="$v.phone.$touch"  :state="$v.phone.$dirty ? !$v.phone.$invalid : mystate"></the-mask>
+                    <the-mask class="form-control" v-model="phone" :mask="['+7(###)### ##-##']" placeholder="Ваш телефон" @blur="$v.phone.$touch"  :state="$v.phone.$dirty ? !$v.phone.$invalid : mystate"></the-mask>
 <!--                    <b-form-input id="input-3" type="email" v-model="email"  @blur="$v.email.$touch" :state="$v.email.$dirty ? !$v.email.$invalid : mystate "  placeholder="Ваша почта"></b-form-input>-->
                     <b-form-textarea
                             id="textarea"
@@ -43,6 +43,14 @@
 <script>
     import { required,email } from 'vuelidate/lib/validators';
     import {TheMask} from 'vue-the-mask'
+    import axios from "../.nuxt/axios";
+    const headers  = {
+        "Accept": "application/json",
+        "Access-Control-Allow-Origin": "*",
+        "X-Requested-With": "XMLHttpRequest",
+        "Access-Control-Allow-Methods" : "GET,POST,PUT,DELETE,OPTIONS",
+        "Access-Control-Allow-Headers": "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With"
+    }
     export default {
         name: "Contact",
         components: {
@@ -53,7 +61,7 @@
             phone:"",
             email:"",
             messages:"",
-            mystate:null,
+            mystate: null,
             social:[
                 {title:"ВКонтакте",url:"/img/icon/vk.png"},
                 {title:"Инстаграм",url:"/img/icon/ig.png"},
@@ -80,11 +88,21 @@
             }
         },
         methods: {
-            submitForm:function () {
+
+            submitForm: function () {
                 if (!this.$v.$invalid){
                     this.$swal( 'Успешно!',
                         'Ваше письмо отправлено!',
-                        'success')
+                        'success');
+                    // this.$axios.$post("http://nuxt.idl.kz/api/message",
+                    //     [{
+                    //         name: this.name,
+                    //         phone: this.phone,
+                    //         message: this.messages
+                    //     }], headers)
+                    // .then(res => {
+                    //     console.log('ok')
+                    // })
                 }
                 else {
                     this.$swal( 'Ошибка!',
@@ -92,6 +110,7 @@
                         'error')
                 }
             },
+
         },
 
     }

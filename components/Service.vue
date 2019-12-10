@@ -30,6 +30,7 @@
                             </b-col>
                         </b-row>
                     </slide>
+                    <hooper-pagination slot="hooper-addons"></hooper-pagination>
                 </hooper>
             </b-row>
             <b-row class="typicalRowContent">
@@ -44,12 +45,12 @@
 </template>
 
 <script>
-    import {Hooper,Slide} from "hooper"
+    import {Hooper,Slide, Pagination as HooperPagination} from "hooper"
     import 'hooper/dist/hooper.css';
     export default {
         name: "Service",
         components:{
-            Hooper,Slide
+            Hooper,Slide, HooperPagination
         },
         data:()=>({
             cards:[
